@@ -1,24 +1,11 @@
-<% provide(:title, 'Sign up') %>
+<% provide(:title, "Sign up") %>
+<% provide(:button_text, "Join Now") %>
+
 <h1>Sign up</h1>
 
 <div class="row">
   <div class="col-md-4 col-md-offset-4">
-    <div class="form-body">
-          <div class="sa-innate-form">
-            <%= form_for(@user, url: signup_path) do |f| %>
-            <%= f.label :name %>
-            <%= f.text_field :name %>
-            <%= f.label :email %>
-            <%= f.text_field :email %>
-            <%= f.label :password %>
-            <%= f.password_field :password %>
-            <%= f.label :password_confirmation, "Confirmation" %>
-            <%= f.password_field :password_confirmation %>
-            <%= f.submit "Join Now", class: "btn btn-primary" %>
-            <p>By clicking Join now, you agree to hifriends's User Agreement, Privacy Policy, and Cookie Policy.</p>
-            <% end %>
-          </div>
-    </div>
+    <%= render "form" %>
   </div>
 </div>
 
