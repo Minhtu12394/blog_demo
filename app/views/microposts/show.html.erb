@@ -40,22 +40,22 @@
           </div>
         <% end %>
 
-        <ul class="comments-list">
-          <% @micropost.comments.each do |comment| %>
-            <li class="comment">
-              <a class="pull-left" href="#">
-                <%= gravatar_for comment.user %>
-              </a>
-              <div class="comment-body">
-                <div class="comment-heading">
-                <h4 class="user"><%= comment.user.name %></h4>
-                <h5 class="time"><%= time_ago_in_words(comment.created_at) + " ago" %></h5>
+          <ul class="comments-list">
+            <% @micropost.comments.each do |comment| %>
+              <li class="comment">
+                <a class="pull-left" href="#">
+                  <%= gravatar_for comment.user %>
+                </a>
+                <div class="comment-body">
+                  <div class="comment-heading">
+                  <h4 class="user"><%= comment.user.name %></h4>
+                  <h5 class="time"><%= time_ago_in_words(comment.created_at) + " ago" %></h5>
+                  </div>
+                  <p><%= comment.content %></p>
                 </div>
-                <p><%= comment.content %></p>
-              </div>
-            </li>
-          <% end %>
-        </ul>
+              </li>
+            <% end %>
+          </ul>
       </div>
     </div>
   </div>
