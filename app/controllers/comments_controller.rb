@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
       @comment.save
 
       if @comment.save
-        redirect_to @micropost
+        redirect_to root_url
       else
         render "static_pages/home"
       end
